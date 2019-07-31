@@ -39,7 +39,7 @@ def test_guest_cant_see_product_in_cart_opened_from_product_page(browser):
     page.go_to_basket_page()
     page1 = CartPage(browser, link) 
     page1.should_be_message_about_empty_basket()
-    #сделать проверку отрицательную
+    page1.should_not_be_title_item()
 
     
 
