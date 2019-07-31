@@ -2,6 +2,7 @@ from pages.product_page import ProductPage
 from pages.main_page import MainPage
 from pages.base_page import BasePage
 from pages.cart_page import CartPage
+from pages.login_page import LoginPage
 import pytest
 import time
 
@@ -41,7 +42,33 @@ def test_guest_cant_see_product_in_cart_opened_from_product_page(browser):
     page1.should_be_message_about_empty_basket()
     page1.should_not_be_title_item()
 
-    
+@pytest.mark.login
+class TestUserAddToCartFromProductPage(object):
+    @pytest.fixture(scope="function", autouse=True)
+    def setup(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
+        page = MainPage(browser, link)   # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес 
+        page.open()                      # открываем страницу
+        page.go_to_login_page()
+        email = str(time.time()) + "@fakemail.org"
+        page1 = LoginPage(browser, link) 
+        page1.register_new_user(email)  
+   
+    def test_user_can_add_product_to_cart(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
+        page = ProductPage(browser, link)   # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес 
+        page.open()                         # открываем страницу
+        page.add_to_basket()
+        page1 = MainPage(browser, link) 
+        page1.solve_quiz_and_get_code()
+        page.should_be_message_about_add_item_to_basket()
+        page.should_be_correct_price()
+
+    def test_user_cant_see_success_message(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
+        page = ProductPage(browser, link)
+        page.open()
+        page.should_not_be_success_message()
 
 
 

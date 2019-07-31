@@ -6,8 +6,13 @@ class MainPageLocators(object):
     
 class LoginPageLocators(object):
     LOGIN_FORM = (By.ID, "login_form")
+    PASSWORD_FIELD1 = (By.ID, "id_registration-password1")
+    PASSWORD_FIELD2 = (By.ID, "id_registration-password2")
+    REGISTER_BUTTON = (By.NAME, "registration_submit")
+    REGISTRATION_FIELD = (By.ID, "id_registration-email")
     REGISTER_FORM = (By.ID, "register_form")
-
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+    
 class ProductPageLocators(object):
     ADD_TO_BASKET = (By.XPATH, "//button [text()='Add to basket']")
     DISAPPEARED_MESSAGE = (By.CSS_SELECTOR, "#messages > div.alert.alert-safe.alert-noicon.alert-warning.fade.in")
