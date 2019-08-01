@@ -23,10 +23,3 @@ class ProductPage(BasePage):
     def should_disappeared_messages_in_basket(self):
         assert self.should_disappeared_messages_in_basket(*ProductPageLocators.DISAPPEARED_MESSAGE), \
         "Message is should be disappeared, but it don't"
-
-        
-
-
-        
-
-        
