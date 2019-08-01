@@ -6,12 +6,12 @@
 
 Тестирование организованно с помощью:
 
-    Python 3.7.3
-    Система управления пакетами pip
-    Бибилиотека Selenium 3.13.0
-    Драйвер для Chrome ChromeDriver
-    unittest
-    PyTest 3.10.1
+- Python 3.7.3
+- Система управления пакетами pip
+- Бибилиотека Selenium 3.13.0
+- Драйвер для Chrome ChromeDriver
+- unittest
+- PyTest 3.10.1
 
 Linux
 
