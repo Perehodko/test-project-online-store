@@ -18,6 +18,3 @@ def test_guest_cant_see_product_in_cart_opened_from_main_page(browser):
     page.go_to_basket_page()
     page2 = CartPage(browser, link) 
     page2.should_be_message_about_empty_basket()
-
-    
-    
