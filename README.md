@@ -1,4 +1,10 @@
 # test-project-online-store
+Тестирование онлайн магазина: http://selenium1py.pythonanywhere.com/
+Реализованы сдедующие тесты:
+- Добавление товара в корзину гостем
+- Добавление товара в корзину зарегистрированным пользователем
+- Переход на страницу логина
+- Проверка корзины без товаров
 
 Тесты написаны с использование шаблона Page Object
 
@@ -44,4 +50,8 @@ $ pip install pytest==3.10.1
 ```
 pytest -s test_main_page.py
 pytest -s test_product_page.py
+```
+Для смены языка используйте следующую комнду:
+```
+pytest --language=es test_main_page.py 
 ```
