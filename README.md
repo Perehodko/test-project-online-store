@@ -39,3 +39,9 @@ $ sudo chmod +x /usr/bin/chromedriver
 ```
 $ pip install pytest==3.10.1
 ```
+
+Для запуска тестов используйте команду:
+```
+pytest -s test_main_page.py
+pytest -s test_product_page.py
+```
