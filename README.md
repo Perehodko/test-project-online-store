@@ -51,7 +51,7 @@ $ pip install pytest==3.10.1
 pytest -s test_main_page.py
 pytest -s test_product_page.py
 ```
-Для смены языка используйте следующую комнду:
+Для запуска с другим языком используйте следующую комнду:
 ```
 pytest --language=es test_main_page.py 
 ```
