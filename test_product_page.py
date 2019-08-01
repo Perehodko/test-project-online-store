@@ -69,9 +69,3 @@ class TestUserAddToCartFromProductPage(object):
         page = ProductPage(browser, link)
         page.open()
         page.should_not_be_success_message()
-
-
-
-
-
-
