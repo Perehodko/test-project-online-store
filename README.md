@@ -15,10 +15,10 @@
 
 - Python 3.7.3
 - Система управления пакетами pip
-- Бибилиотека Selenium 3.13.0
+- Бибилиотека Selenium 3.14.0
 - Драйвер для Chrome ChromeDriver
 - unittest
-- PyTest 3.10.1
+- PyTest 5.1.1
 
 Linux
 
@@ -28,12 +28,12 @@ $ sudo apt-get install -y python3-pip
 ```
 Установка библиотеки Selenium:
 ```
-pip install selenium==3.13.0
+pip install selenium==3.14.0
 pip list
 ```
-Установка ChromeDriver:
+Установка ChromeDriver версии 77:
 ```
-$ wget https://chromedriver.storage.googleapis.com/75.0.3770.8/chromedriver_linux64.zip
+$ wget https://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip
 $ unzip chromedriver_linux64.zip
 ```
 Переместите разархивированный файл с СhromeDriver в нужную папку и разрешите запускать chromedriver как исполняемый файл:
@@ -44,7 +44,7 @@ $ sudo chmod +x /usr/bin/chromedriver
 ```
 Установка PyTest:
 ```
-$ pip install pytest==3.10.1
+$ pip install pytest==5.1.1
 ```
 
 Для запуска тестов используйте команды:
@@ -52,7 +52,11 @@ $ pip install pytest==3.10.1
 pytest -s test_main_page.py
 pytest -s test_product_page.py
 ```
-Для запуска с другим языком используйте следующую комнду:
+Для запуска с другим языком используйте комнду, где вместо es может быть указан нужный вам язык:
 ```
 pytest --language=es test_main_page.py 
+```
+Для запуска тестов отмаркированных @pytest.mark.need_review выполните команду:
+```
+pytest -v --tb=line --language=en -m need_review
 ```
