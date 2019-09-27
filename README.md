@@ -36,7 +36,7 @@ pip list
 $ wget https://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip
 $ unzip chromedriver_linux64.zip
 ```
-Другую версию chromedriver для браузера Chrome моно скачать по следующей ссылке https://sites.google.com/a/chromium.org/chromedriver/downloads.
+Другую версию chromedriver для браузера Chrome можно скачать по следующей ссылке https://sites.google.com/a/chromium.org/chromedriver/downloads.
 
 Переместите разархивированный файл с СhromeDriver в нужную папку и разрешите запускать chromedriver как исполняемый файл:
 ```
