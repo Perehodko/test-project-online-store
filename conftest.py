@@ -17,6 +17,6 @@ def browser(request):
     
     yield browser
     print("\nquit browser..")
-    time.sleep(1)
-    #browser.quit()
+    #time.sleep(1)
+    browser.quit()
 
