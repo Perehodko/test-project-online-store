@@ -1,4 +1,6 @@
 # test-project-online-store
+Итоговый проект по курсу -- Автоматизация тестирования с помощью Selenium и Python
+
 Тестирование онлайн магазина: http://selenium1py.pythonanywhere.com/
 
 Реализованы следующие тесты:
